@@ -9,7 +9,16 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "start": "nodemon app.ts",
+    "start": "ts-node app.ts",
     "build": "tsc --project ./"
+  },
+  "name": "mmedeiros-homepage",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "keywords": [],
+  "author": "MarcusMedeiros99",
+  "license": "MIT",
+  "engines": {
+    "node": "15.x"
   }
 }
