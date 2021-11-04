@@ -1,1 +1,2 @@
-ts-node app.ts
+npm run build
+node app.ts
