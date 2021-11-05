@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "npm run build && node app.js",
-    "build": "tsc --project ./"
+    "build": "npx tsc --init && tsc --project ./"
   },
   "name": "mmedeiros-homepage",
   "version": "1.0.0",
