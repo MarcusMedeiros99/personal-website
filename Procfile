@@ -1,1 +1,1 @@
-npm run build && node app.js
+node app.js

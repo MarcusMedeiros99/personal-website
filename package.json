@@ -9,8 +9,8 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "start": "npm run build && node app.js",
-    "build": "npx tsc --init && tsc --project ./"
+    "start": "node app.js",
+    "build": "tsc --project ./"
   },
   "name": "mmedeiros-homepage",
   "version": "1.0.0",
