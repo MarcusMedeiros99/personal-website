@@ -1,2 +1,1 @@
-npm run build
-node app.ts
+npm run build && node app.js
