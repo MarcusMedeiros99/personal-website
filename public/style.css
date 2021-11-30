@@ -37,6 +37,10 @@ nav h1 {
 nav .links {
   display: flex;
 }
+nav button {
+  display: none;
+  background-color: #e5e5e5;
+}
 nav ul {
   list-style-type: none;
   display: flex;
@@ -66,6 +70,11 @@ nav ul li img {
   vertical-align: middle;
 }
 
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -101,14 +110,33 @@ section .cards-container {
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 50px;
+  overflow-y: scroll;
+  overflow-x: visible;
+  padding: 10px;
+}
+section .cards-container::-webkit-scrollbar {
+  width: 10px;
+  background: #e5e5e5;
+}
+section .cards-container::-webkit-scrollbar-track {
+  background: #e5e5e5;
+  border-radius: 10px;
+}
+section .cards-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+section .cards-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 section .cards-container .card {
   box-shadow: 0 0 8px rgba(7, 37, 60, 0.4);
   border-radius: 13px;
-  padding: 25px;
+  padding: 4px;
   color: #212121;
-  width: 30%;
   margin-left: 40px;
+  flex: 1;
+  min-width: 26%;
 }
 section .cards-container .card h3 {
   margin: 0;
@@ -124,6 +152,13 @@ section .cards-container .card:first-child {
   margin-left: 0px;
 }
 
+#skills .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   color: #e5e5e5;
   text-align: center;
@@ -136,6 +171,100 @@ footer p {
   background-size: cover;
   overflow: visible;
   padding-top: 200px;
+}
+
+.invisible {
+  display: none !important;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    margin: 0;
+    display: flex;
+  }
+  body .container {
+    padding: 30px 30px 0px 30px;
+    width: 100vw;
+    box-sizing: content-box;
+  }
+
+  nav {
+    font-family: "Poppins", sans-serif;
+    color: #002265;
+    padding-left: 10px;
+    background: #e5e5e5;
+  }
+  nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  nav button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    margin-bottom: 0px !important;
+  }
+  .cards-container .card {
+    margin-bottom: 12px;
+    margin-left: 0px !important;
+    flex: 1;
+    padding: 12px 0px !important;
+  }
+
+  nav.mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0px 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: fit-content;
+    height: 100%;
+    flex: 1;
+    border-left: 1px solid rgba(7, 37, 60, 0.4);
+  }
+  nav.mobile.active-menu {
+    right: 0 !important;
+    left: auto;
+  }
+  nav.mobile .icons {
+    display: flex;
+  }
+  nav.mobile .icons img {
+    width: 32px;
+    height: 32px;
+  }
+  nav.mobile .icons p {
+    margin-right: 15px;
+  }
+  nav.mobile ul {
+    background: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 25px;
+    padding: 0;
+  }
+  nav.mobile ul li {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
